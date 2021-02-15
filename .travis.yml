@@ -30,8 +30,8 @@ script:
 - node_modules/.bin/newman run tests/postman_collection.json -e tests/postman_environment.json
 after_success:
 - docker login -u $DOCKER_USER -p $DOCKER_PASS
-- docker tag docker push csgert/devops-lab2 docker push csgert/devops-lab2
-- docker docker push csgert/devops-lab2
+- docker tag csgert/devops-lab2 csgert/devops-lab2
+- docker push csgert/devops-lab2
 env:
   global:
   - secure: VUmtnCjSlEREIODsR1DMP9yZYiL7C16Wn3lfVWjkDQtZkF+ZDMVgnuxYavcrkEbjncmizSCGm3Qf+o3GXMGo8LE5tphzaL073YF2MQiXIF2A8glC4cTgVcqgv4Du+SbgIMn/YPxe41mJLNaNSmB6C6k0r3/+K7wX/RORa/ziBunS9PORn8kWuEeS1dur8JCRcvnUW3RhjMtXIi/xZac/lspHVwZTF/mOBZOO7K4VNVHWbUiHwtT6mTJnny5wIiZK29jfXMsQfdO/baqO64xKnWemW66JTk3SzrQmMRxNnitjErBYSFOQDZmDYJY+aqP1Vw7sGEUE5F0N5C12k/vEtIHqHaW3uXPbVdo5iBuoUgUxSedwYFVZkJwcZ21cFkAJdL5hW/+u/OqHZJog5SyqXFzYlWcDXlFRZdGM3R3o2gIP8SqgbzpBK2mfqnEhUG1POXA6OQ/LNuP/xtJJzgciDiIP+vBJfVNmGoK+e8c3cPmhPJTLuG/tJfHrHFZFbLuF+DUk8N4n3Ict3eBjIGfIVCmk95t/2YftQ1htCcXNvkub6bp27REy1ZmknsDSlJ6yVHRFcYVg9PWjT0+Hz3SAKClPEP3eBAr/K6S50WLZLmr523AGy+Z+1HnwdEo4nQtUTtQUcy6vEU1+JU9T93mzn7gYMNo4Oi66A/7zajTOwmY=
