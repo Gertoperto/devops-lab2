@@ -10,8 +10,8 @@ before_install:
 install:
 - nvm install --lts
 - npm install newman
-- pip install -r python-flask-server/requirements.txt
-- pip install -r python-flask-server/test-requirements.txt
+- pip install -r requirements.txt
+- pip install -r test-requirements.txt
 - pip install nose
 - pip install Flask-Testing
 before_script:
