@@ -48,16 +48,14 @@ paths:
       parameters:
       - name: "first_name"
         in: "query"
-        description: "ID of student to return"
+        description: "first name of student to return"
         required: false
-        type: "integer"
-        format: "int64"
+        type: "string"
       - name: "last_name"
         in: "query"
-        description: "ID of student to return"
+        description: "last name of student to return"
         required: false
-        type: "integer"
-        format: "int64"
+        type: "string"
       responses:
         "200":
           description: "successful operation"

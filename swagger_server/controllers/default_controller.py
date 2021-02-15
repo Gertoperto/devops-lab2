@@ -66,6 +66,9 @@ def get_student_by_query(first_name=None, last_name=None):  # noqa: E501
 
     :rtype: Student
     """
-    return 'do some magic!'
+    res = student_service.get_student_by_name(first_name=first_name, last_name=last_name)
+    if res:
+        return res
+    return 'Not Found', 404
 
 
