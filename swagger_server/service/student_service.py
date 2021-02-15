@@ -35,9 +35,10 @@ def get_student_by_id(student_id, subject):
     if not student:
         return student
     student = Student.from_dict(student)
-    # if not subject:
-    return student
-
+    if not subject or subject in student.grades:
+        return student
+    else:
+        return None
 
 def delete_student(student_id):
     student = student_db.get(doc_id=int(student_id))
